@@ -1,0 +1,27 @@
+{
+  "manifest_version": 3,
+  "name": "Extennndo",
+  "description": "Minimal new tab page fetching pictures from @entropy API",
+  "version": "1.0",
+  "author": "waassbb",
+  "icons": {
+    "16": "16x16.png",
+    "32": "24x24.png",
+    "48": "48x48.png",
+    "128": "128x128.png"
+  },
+  "browser_action": {
+    "default_icon": "icon.png"
+  },
+  "chrome_url_overrides" : {
+    "newtab": "index.html"
+  },
+  "content_scripts": [
+    {
+      "run_at": "document_start",
+      "js": ["scripts.js"],
+      "css": ["styles.css"],
+      "matches": ["<all_urls>"]
+    }
+  ]
+}

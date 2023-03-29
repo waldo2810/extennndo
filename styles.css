@@ -1,0 +1,103 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+:root {
+  --primary-color: #ffffff;
+  --primary-dimmed: rgb(247, 247, 247);
+  --primary-hovered: rgb(231, 231, 231);
+  --secondary-color: #000000;
+  --secondary-dimmed: #1f1f1f;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Inter", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  background-color: var(--secondary-color);
+  transition: all 500ms;
+}
+
+body.dark-mode {
+  --primary-color: #000000;
+  --secondary-color: #ffffff;
+}
+
+.container {
+  margin: auto;
+  height: 95vh;
+  width: 80%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: rgb(0, 0, 0);
+}
+
+.background-image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 70%;
+  background: no-repeat;
+  background-size: contain;
+  background-position: center;
+}
+
+.actions {
+  height: 30%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+h1 {
+  color: var(--primary-color);
+  font-weight: 300;
+  font-size: 1.5rem;
+}
+
+button {
+  border-radius: 0.25rem;
+  line-height: 1.5rem;
+  padding: 0.5rem 0.75rem;
+  transition: all 250ms;
+  cursor: pointer;
+  border: transparent;
+  background-color: var(--secondary-color);
+}
+
+button:hover {
+  background-color: var(--secondary-dimmed);
+}
+
+a {
+  color: var(--primary-dimmed);
+}
+
+/* light mode styles */
+.light {
+  background-color: var(--primary-color);
+  color: var(--secondary-color);
+}
+
+.light a {
+  color: var(--secondary-dimmed);
+}
+
+.light h1 {
+  color: var(--secondary-color);
+}
+
+.light button {
+  background-color: var(--primary-color);
+}
+
+.light button:hover {
+  background-color: var(--primary-hovered);
+}
+
+.light .container {
+  color: var(--secondary-color);
+}
+
+.light .background-image {
+  background-color: var(--primary-color);
+}
