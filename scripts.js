@@ -4,14 +4,18 @@ async function getData() {
     .then((res) => {
       console.log(res[0].url);
       const imgUrl = res[0].url;
-      const imageDiv = document.querySelector(".background-image");
+      const imageDiv = document.querySelector(
+        ".extennndo-extension-background-image"
+      );
 
       imageDiv.style.backgroundImage = `url(${imgUrl})`;
     })
     .catch((err) => console.log(err));
 }
 
-const toggleBtn = document.querySelector("#toggle-btn");
+getData();
+
+const toggleBtn = document.querySelector("#extennndo-extension-toggle-btn");
 const body = document.querySelector("body");
 let isLight = false;
 
@@ -20,5 +24,3 @@ toggleBtn.addEventListener("click", () => {
   isLight ? (toggleBtn.innerText = "💡") : (toggleBtn.innerText = "🌙");
   body.classList.toggle("light");
 });
-
-getData();
