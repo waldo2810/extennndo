@@ -1,5 +1,6 @@
 # extennndo
 ![banner](https://i.ibb.co/TYy4FcG/440x280-1.png)
+<br>
 waassbb's version of @ennntropy's Extendo
 See it here: [link to extension](https://chrome.google.com/webstore/detail/extennndo/kjgnmnaicoigamndkobbdmdhnbenioec)
 <br>
