@@ -1,16 +1,30 @@
+totalBlocks = 7000000;
+let stop = false;
+
 async function getData() {
-  await fetch("https://www.entropyplus.xyz/api/v1/images")
-    .then((res) => res.json())
-    .then((res) => {
-      console.log(res[0].url);
-      const imgUrl = res[0].url;
+  while (stop === false) {
+    const randomNumber = Math.floor(Math.random() * totalBlocks) + 1;
+    const res = await fetch(`https://api.are.na/v2/blocks/${randomNumber}`);
+
+    if (!res.ok) {
+      stop = true
+    }
+
+      blockInfo = await res.json();
+
+    if (blockInfo.class === "Image") {
+
+      const imageUrl = blockInfo.image.original.url
       const imageDiv = document.querySelector(
         ".extennndo-extension-background-image"
       );
 
-      imageDiv.style.backgroundImage = `url(${imgUrl})`;
-    })
-    .catch((err) => console.log(err));
+      imageDiv.style.backgroundImage = `url(${imageUrl})`;
+      console.log(blockInfo); // Display the block information
+      stop = true
+    }
+  }
+
 }
 
 getData();
